@@ -42,7 +42,7 @@ class minheap:
             if self.heap[i] < self.heap[max_node]:
                 self.swap(i,max_node)
                 i = max_node
-    #code to find the max child to which we need to replace data
+    #code to find the min child to which we need to replace data
     def max_node_child(self,i):
         if self.has_left(i):
             left_child = self.get_left(i)
