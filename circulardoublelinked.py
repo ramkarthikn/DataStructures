@@ -87,10 +87,15 @@ class circularlist:
         if self.start== None:
             return -1 
         else:
+            temp=self.start
+            while temp.next!=self.start:
+                temp=temp.next
             first= self.start 
-            temp= self.start.next 
-            self.start = temp
-            first.next= None  
+            temp1= self.start.next
+            self.start = temp1
+            first.next=None 
+            temp1.prev=None
+            temp.next= self.start
     def delete(self,k):
         if k==0:
             self.delete_beg()
