@@ -8,7 +8,7 @@ class heap1():
     def get_right_child(self,i):
         return 2*i+2 
     def has_parent(self,i):
-        return self.get_parent(i) >=0 
+        return self.get_left_child(i) >=0 
     def has_left_child(self,i):
         return self.get_left_child(i) < len(self.heap)
     def has_right_child(self,i):
